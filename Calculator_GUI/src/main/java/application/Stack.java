@@ -42,8 +42,8 @@ public class Stack {
     if (size == 0) {
       throw new EmptyStackException("Can not pop from empty Stack!"); // Ensures Stack is not empty
     }
-    Entry popped = entries.get(size - 1); // Uses (size - 1) as the index as index starts from 0
-    entries.remove(size - 1); // Removes the last entry from the list using (size - 1) as the index.
+    Entry popped = entries.remove(size - 1); // Removes the last entry from the list using (size -
+    // 1) as index starts from 0
     size -= 1;
     return popped;
   }

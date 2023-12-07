@@ -96,4 +96,32 @@ public class Entry {
     return str;
   }
 
+  /**
+   * Compares this Entry object with another Entry object for equality. Two entries are considered
+   * equal if they have the same type and equivalent value.
+   * 
+   * @param other the Entry object to be compared to this entry
+   * @return true if both entries are of the same type and have the same value, false otherwise.
+   */
+  public boolean equals(Entry other) {
+
+    if (this.type != other.type) {
+      return false;
+    }
+    if (this == null & other == null) {
+      return true;
+    }
+
+    switch (this.type) {
+      case NUMBER:
+        return Float.compare(this.number, other.number) == 0;
+      case STRING:
+        return this.str != null ? this.str.equals(other.str) : other.str == null;
+      case SYMBOL:
+        return this.symbol == other.symbol;
+      default:
+        return false;
+    }
+  }
+
 }
