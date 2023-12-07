@@ -81,6 +81,13 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<!-- eclEmma 3.17 (Jacoco for Eclipse) uses version 0.8.10, so
 				we should as well -->
+				<configuration>
+          <excludes>
+            <exclude>**/*View*</exclude>
+            <exclude>**/*Driver*</exclude>
+            <exclude>**/test/**/**.class</exclude>
+          </excludes>
+        </configuration>
 				<version>0.8.10</version>
 				<executions>
 					<execution>
