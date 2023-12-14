@@ -1,6 +1,6 @@
 package application;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,9 +20,16 @@ class TestNumStack {
   void testNumStackClass() {
     NumStack ns = new NumStack(); // 1st Test fixed by creating NumStack Class.
   }
-  
+
   @Test
   void testPushFloat() {
     ns.push(5.0f); // 2nd Test fixed by creating push method.
+  }
+
+  @Test
+  void testPopFloat() {
+    ns.push(5.0f);
+    assertEquals(5.0f, ns.pop()); // 3rd Test fixed by creating top method that returns the last
+                                  // pushed in float type. NumStack no longer extends class.
   }
 }

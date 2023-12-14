@@ -48,7 +48,7 @@ public class Entry {
    * @return the float value stored
    * @throws BadTypeException if the current type of Entry is not NUMBER
    */
-  public Object getValue() {
+  public float getValue() {
     if (type != Type.NUMBER) {
       // Ensures correct type of entry is retrieved
       throw new BadTypeException("Bad Type, Expected: Type.NUMBER.");
