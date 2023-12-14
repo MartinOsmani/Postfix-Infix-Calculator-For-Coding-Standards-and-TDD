@@ -32,4 +32,22 @@ class TestNumStack {
     assertEquals(5.0f, ns.pop()); // 3rd Test fixed by creating top method that returns the last
                                   // pushed in float type. NumStack no longer extends class.
   }
+
+  @Test
+  void testTopFloat() {
+    ns.push(3.0f);
+    ns.push(3.65f);
+    assertEquals(3.65f, ns.top());
+  }
+
+  @Test
+  void testSize() {
+    assertEquals(0, ns.size());
+    ns.push(3.0f);
+    assertEquals(1, ns.size());
+    ns.push(4.0f);
+    ns.push(2.43f);
+    ns.pop();
+    assertEquals(2, ns.size()); // 4th Test fixed by adding size method that returns size of stack.
+  }
 }
