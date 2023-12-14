@@ -9,10 +9,8 @@ import java.util.List;
  * @author martinosmani
  */
 public class NumStack {
+  private Stack baseStack = new Stack();
 
-  private List<Entry> entries = new ArrayList<Entry>();
-  private Stack baseStack;
-  private int size = 0;
 
   public NumStack() {
     baseStack = new Stack();
@@ -25,8 +23,7 @@ public class NumStack {
    */
   public void push(float number) {
     Entry e = new Entry(number);
-    entries.add(e);
-    size += 1;
+    baseStack.push(e);
   }
 
   /**
@@ -35,10 +32,8 @@ public class NumStack {
    * @return the last {@code Entry} at the top of the baseStack as float.
    */
   public float pop() {
-    Entry popped = entries.remove(size - 1);
-    float f = popped.getValue();
-    size -= 1;
-    return f;
+    Entry popped = baseStack.pop();
+    return popped.getValue();
   }
 
   /**
@@ -47,19 +42,19 @@ public class NumStack {
    * @return the top {@code Entry} from the baseStack
    */
   public float top() {
-    return entries.get(size - 1).getValue();
+    return baseStack.top().getValue();
   }
-  
+
   /**
    * Retrieves the number of entries in the baseStack.
    * 
    * @return the number of entries in the baseStack
    */
   public int size() {
-    return size;
+    return baseStack.size();
   }
-  
-  
+
+
 }
 
 

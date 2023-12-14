@@ -14,6 +14,14 @@ public class Stack {
   private int size = 0; // Keeps track of number of entries in a stack and used as a pointer
 
   /**
+   * Constructor for Stack class.
+   */  
+  public Stack() {
+    this.entries = new ArrayList<Entry>(); // Initialise the list for the stack
+    this.size = 0; // Initialise the size of the stack
+  }
+
+  /**
    * Pushes a new {@code Entry} onto the stack.
    * 
    * @param e {@code Entry} to be pushed to the stack
