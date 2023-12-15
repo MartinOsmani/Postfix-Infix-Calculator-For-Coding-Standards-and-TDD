@@ -1,5 +1,10 @@
 package application;
 
+/**
+ * Is an altercation of the Stack class which it extends, used to handle stacks with Symbols.
+ * 
+ * @author martinosmani
+ */
 public class OpStack {
   private Stack baseStack;
 
@@ -15,7 +20,7 @@ public class OpStack {
   /**
    * Pushes a new {@code Symbol Entry} onto the baseStack.
    * 
-   * @param Symbol to be pushed to the baseStack
+   * @param symbol to be pushed to the baseStack
    */
   public void push(Symbol symbol) {
     Entry e = new Entry(symbol);
