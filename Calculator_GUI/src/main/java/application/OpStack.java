@@ -22,5 +22,15 @@ public class OpStack {
     baseStack.push(e);
   }
 
+  /**
+   * Removes and returns the top {@code SYMBOL Entry} from the baseStack.
+   * 
+   * @return the last {@code Symbol Entry} at the top of the baseStack as a Symbol.
+   */
+  public Symbol pop() {
+    Entry popped = baseStack.pop();
+    return popped.getSymbol();
+  }
+
 
 }
