@@ -50,4 +50,7 @@ class TestNumStack {
     ns.pop();
     assertEquals(2, ns.size()); // 4th Test fixed by adding size method that returns size of stack.
   }
+  
 }
+
+

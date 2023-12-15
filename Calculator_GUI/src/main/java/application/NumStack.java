@@ -9,7 +9,7 @@ import java.util.List;
  * @author martinosmani
  */
 public class NumStack {
-  private Stack baseStack = new Stack();
+  private Stack baseStack;
 
 
   public NumStack() {
