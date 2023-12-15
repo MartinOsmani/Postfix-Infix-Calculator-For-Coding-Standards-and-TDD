@@ -31,4 +31,22 @@ public class StrStack {
     Entry popped = baseStack.pop();
     return popped.getString();
   }
+
+  /**
+   * Retrieves the top() {@code String Entry} from the baseStack but does not remove it.
+   * 
+   * @return the top {@code String Entry} from the baseStack as a String
+   */
+  public String top() {
+    return baseStack.top().getString();
+  }
+
+  /**
+   * Retrieves the number of entries in the baseStack.
+   * 
+   * @return the number of entries in the baseStack
+   */
+  public int size() {
+    return baseStack.size(); 
+  }
 }
