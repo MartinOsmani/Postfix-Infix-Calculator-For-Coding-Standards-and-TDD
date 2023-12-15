@@ -34,4 +34,11 @@ class TestOpStack {
                                            // last symbol pushed to the stack.
   }
 
+  @Test
+  void testTopFloat() {
+    ops.push(Symbol.PLUS);
+    ops.push(Symbol.LEFT_BRACKET);
+    assertEquals(Symbol.LEFT_BRACKET, ops.top()); // 4th Test fixed by creating top method that returns the last symbol.
+  }
+
 }

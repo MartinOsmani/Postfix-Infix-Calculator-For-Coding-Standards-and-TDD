@@ -29,7 +29,7 @@ public class NumStack {
   /**
    * Removes and returns the top {@code Entry} from the baseStack.
    * 
-   * @return the last {@code Entry} at the top of the baseStack as float.
+   * @return the last {@code Entry} at the top of the baseStack as float
    */
   public float pop() {
     Entry popped = baseStack.pop();
