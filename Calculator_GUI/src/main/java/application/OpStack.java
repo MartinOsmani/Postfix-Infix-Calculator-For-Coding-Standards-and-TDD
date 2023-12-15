@@ -40,6 +40,15 @@ public class OpStack {
   public Symbol top() {
     return baseStack.top().getSymbol();
   }
+
+  /**
+   * Retrieves the number of entries in the baseStack.
+   * 
+   * @return the number of entries in the baseStack
+   */
+  public int size() {
+    return baseStack.size();
+  }
   
   
 

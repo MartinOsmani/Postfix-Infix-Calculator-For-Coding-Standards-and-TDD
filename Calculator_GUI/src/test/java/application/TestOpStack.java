@@ -40,5 +40,17 @@ class TestOpStack {
     ops.push(Symbol.LEFT_BRACKET);
     assertEquals(Symbol.LEFT_BRACKET, ops.top()); // 4th Test fixed by creating top method that returns the last symbol.
   }
+  
+  @Test
+  void testSize() {
+    assertEquals(0, ops.size());
+    ops.push(Symbol.DIVIDE);
+    assertEquals(1, ops.size());
+    ops.push(Symbol.TIME);
+    ops.push(Symbol.RIGHT_BRACKET);
+    ops.pop();
+    assertEquals(2, ops.size()); // 5th Test fixed by adding size method that returns size of stack.
+  }
+  
 
 }
