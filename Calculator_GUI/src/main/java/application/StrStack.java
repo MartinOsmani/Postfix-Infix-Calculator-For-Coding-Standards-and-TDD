@@ -21,4 +21,14 @@ public class StrStack {
     Entry e = new Entry(str);
     baseStack.push(e);
   }
+
+  /**
+   * Removes and returns the top {@code String Entry} from the baseStack.
+   * 
+   * @return the last {@code String Entry} at the top of the baseStack as a String
+   */
+  public String pop() {
+    Entry popped = baseStack.pop();
+    return popped.getString();
+  }
 }

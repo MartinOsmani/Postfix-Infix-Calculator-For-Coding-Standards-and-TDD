@@ -1,5 +1,6 @@
 package application;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,4 +23,11 @@ class TestStrStack {
   void testPushString() {
     ss.push("A"); // 2nd Test fixed by creating the push() method.
   }
+  
+  @Test 
+  void testPopString() {
+    ss.push("A");
+    assertEquals("A", ss.pop());
+  }
+  
 }
